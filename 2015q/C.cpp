@@ -30,7 +30,7 @@ void main2(int t) {
     int loopLength;
     int loop[10];
     
-    scanf("%ld %ld", &L, &X);
+    scanf("%lld %lld", &L, &X);
     scanf("%c%c", &c, &c); // \r\n
     for(int i = 0; i < L; i++) {
         scanf("%c", &c);
@@ -102,8 +102,9 @@ void main2(int t) {
         // printf("%d ", cur);
     }
     
-    int loopsLeft = X - curLoop - 1;
+    long long loopsLeft = X - curLoop - 1;
     // printf("%d ", cur);
+    // printf("-- %d %lld", loopLength, loopsLeft);
     cur = getProd(cur, loop[loopsLeft % loopLength]);
     // printf("%d ", cur);
     if(cur == 1) {
@@ -125,7 +126,7 @@ int main() {
     
     for(int i = 0; i < T; i++) {
         printf("Case #%d: ", i + 1);
-        // fflush(stdout);
+        fflush(stdout);
         main2(i + 1);
     }
     
